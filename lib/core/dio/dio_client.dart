@@ -2,15 +2,18 @@ import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class DioClient {
-  static Dio getDio() {
-    final dio = Dio(
-      BaseOptions(baseUrl:'https://jsonplaceholder.typicode.com',
-      connectTimeout: const Duration(seconds: 10),
-      receiveTimeout: const Duration(seconds: 10),
+  static Dio? _dio;
+
+  static Dio get dio {
+    _dio ??= Dio(
+      BaseOptions(
+        baseUrl: 'https://jsonplaceholder.typicode.com',
+        connectTimeout: const Duration(seconds: 10),
+        receiveTimeout: const Duration(seconds: 10),
       ),
     );
 
-    dio.interceptors.add(
+    _dio!.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) async {
           final user = FirebaseAuth.instance.currentUser;
@@ -19,14 +22,16 @@ class DioClient {
             final token = await user.getIdToken();
             options.headers['Authorization'] = 'Bearer $token';
           }
+          return handler.next(options);
         },
         onError: (error, handler) {
           if (error.response?.statusCode == 401) {
-            print('Usuário não atorizado');
+            print('Usuário não autorizado');
           }
           return handler.next(error);
         },
-      ));
-      return dio;
+      ),
+    );
+    return _dio!;
   }
 }

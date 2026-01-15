@@ -1,12 +1,14 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:loginflutterteste/features/data/auth_firebase_datarsource.dart';
 import 'package:loginflutterteste/features/repositories/auth_repository.dart';
 
-class AuthRepositoryImpl implements AuthRepository {
+final class AuthRepositoryImpl implements AuthRepository {
   final FirebaseAuth _firebaseAuth;
-  final AuthFirebaseDatarsource;
+  final AuthFirebaseDatarsource _authFirebaseDatarsource;
 
-  AuthRepositoryImpl(this._firebaseAuth, 
-  this.AuthFirebaseDatarsource
+  AuthRepositoryImpl(
+  this._firebaseAuth, 
+  this._authFirebaseDatarsource
   );
 
   @override
@@ -18,6 +20,6 @@ class AuthRepositoryImpl implements AuthRepository {
   }
   @override
   Future<Map<String, dynamic>> getUserProfile() {
-    return AuthFirebaseDatarsource.getUserProfile();
+    return _authFirebaseDatarsource.getUserProfile();
   }
 }
