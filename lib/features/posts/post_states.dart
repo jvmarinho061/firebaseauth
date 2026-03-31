@@ -1,3 +1,4 @@
+import 'package:loginflutterteste/models/comment_model.dart';
 import 'package:loginflutterteste/models/postModel.dart';
 
 abstract class PostState {}
@@ -5,6 +6,8 @@ abstract class PostState {}
 class PostInitial extends PostState {}
 
 class PostLoading extends PostState {}
+
+class CommentsLoading extends PostState {}
 
 class PostLoaded extends PostState {
   final List<PostModel> posts;
@@ -22,4 +25,11 @@ class PostError extends PostState {
   final String message;
 
   PostError(this.message);
+}
+
+class CommentsLoaded extends PostState {
+  final PostModel post;
+  final List<CommentModel> comments;
+
+  CommentsLoaded(this.post, this.comments);
 }

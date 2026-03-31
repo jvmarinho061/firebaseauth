@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/widgets.dart';
 
 class DioClient {
   static Dio? _dio;
@@ -26,7 +27,7 @@ class DioClient {
         },
         onError: (error, handler) {
           if (error.response?.statusCode == 401) {
-            print('Usuário não autorizado');
+            debugPrint('Usuário não autorizado');
           }
           return handler.next(error);
         },

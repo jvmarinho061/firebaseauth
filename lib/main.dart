@@ -8,7 +8,6 @@ import 'package:loginflutterteste/core/router/app_router.dart';
 import 'package:loginflutterteste/features/auth/auth_bloc.dart';
 import 'package:loginflutterteste/features/data/auth_firebase_datarsource.dart';
 import 'package:loginflutterteste/features/data/auth_repository_impl.dart';
-import 'package:loginflutterteste/features/pages/login_page.dart';
 import 'package:loginflutterteste/features/posts/post_bloc.dart';
 import 'package:loginflutterteste/features/repositories/auth_repository.dart';
 import 'package:loginflutterteste/features/repositories/post_repository.dart';

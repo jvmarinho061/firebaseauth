@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:loginflutterteste/models/postModel.dart';
-import 'package:loginflutterteste/widgets/post_actions.dart';
+import 'package:loginflutterteste/widgets/post_card_details.dart';
 import 'package:loginflutterteste/widgets/post_content.dart';
+import 'package:loginflutterteste/widgets/post_footer.dart';
 import 'package:loginflutterteste/widgets/post_header.dart';
 import 'package:loginflutterteste/widgets/post_image.dart';
 
@@ -23,7 +24,8 @@ class PostCard extends StatelessWidget {
             PostHeader(post: post),
             PostContent(post: post),
             PostImage(post: post),
-            PostActions(post: post),
+            PostCardDetails(post: post),
+            PostFooter(post: post),
           ],
         ),
       ),

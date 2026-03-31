@@ -12,7 +12,7 @@ class PostHeader extends StatelessWidget {
     return ListTile(
       leading: const CircleAvatar(
         backgroundImage: NetworkImage(
-          'https://media.licdn.com/dms/image/v2/D4D0BAQF7zOBiTXjQQA/company-logo_200_200/company-logo_200_200/0/1704316274180/esig_group_logo?e=2147483647&v=beta&t=3VRnvPvMV8E7drh4Ng0lo8pGc9G028E_mPOXVFfocbQ',
+          'https://cdn-icons-png.flaticon.com/512/25/25231.png',
         ),
       ),
       title: Text('Usuário ${post.userId}'),

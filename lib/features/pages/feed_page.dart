@@ -22,15 +22,16 @@ class _FeedPageState extends State<FeedPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Feed')),
+      backgroundColor: Color(0xFFBB8ED0),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xFFBBDEFB),
-              Color(0xFF1976D2),
-            ],
+              Color(0xFFBB8ED0), 
+              Color(0xFFF29AAE)
+              ],
           ),
         ),
         child: BlocBuilder<PostBloc, PostState>(

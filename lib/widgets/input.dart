@@ -5,7 +5,7 @@ class Input extends StatelessWidget {
   final String hint;
   final bool obscure;
 
-  const Input({
+  const Input({super.key, 
     required this.controller,
     required this.hint,
     this.obscure = false,
