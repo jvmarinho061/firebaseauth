@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:loginflutterteste/models/postModel.dart';
-import 'package:loginflutterteste/widgets/post_card_details.dart';
-import 'package:loginflutterteste/widgets/post_content.dart';
-import 'package:loginflutterteste/widgets/post_footer.dart';
-import 'package:loginflutterteste/widgets/post_header.dart';
-import 'package:loginflutterteste/widgets/post_image.dart';
+import 'package:loginflutterteste/widgets/widgetsPost/post_card_details.dart';
+import 'package:loginflutterteste/widgets/widgetsPost/post_content.dart';
+import 'package:loginflutterteste/widgets/widgetsPost/post_footer.dart';
+import 'package:loginflutterteste/widgets/widgetsPost/post_header.dart';
+import 'package:loginflutterteste/widgets/widgetsPost/post_image.dart';
 
 class PostCard extends StatelessWidget {
   final PostModel post;

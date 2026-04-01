@@ -22,4 +22,12 @@ final class AuthRepositoryImpl implements AuthRepository {
   Future<Map<String, dynamic>> getUserProfile() {
     return _authFirebaseDatarsource.getUserProfile();
   }
+  
+  @override
+  Future<void> register(String email, String password) async {
+    await _firebaseAuth.createUserWithEmailAndPassword(
+      email: email, 
+      password: password
+      );
+  }
 }

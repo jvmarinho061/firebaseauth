@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
       body: SafeArea(
         child: BlocListener<AuthBloc, AuthState>(
           listener: (context, state) {
-            if(state is AuthSuccess) {
+            if(state is Authenticated) {
               context.go('/feed');
             }
             if (state is AuthFailure) {
@@ -106,6 +106,15 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Color(0xFF00376B)),
                   ),
                 ),
+
+                TextButton(
+                  onPressed: () {
+                    context.go('/cadastro');
+                  }, 
+                  child: const Text(
+                    'Ainda não possui cadastro?',
+                    style: TextStyle(color: Color(0xFF00376B)),
+                  ))
               ],
             ),
           ),

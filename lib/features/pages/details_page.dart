@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loginflutterteste/features/posts/post_bloc.dart';
 import 'package:loginflutterteste/features/posts/post_events.dart';
 import 'package:loginflutterteste/features/posts/post_states.dart';
-import 'package:loginflutterteste/widgets/post_card_details.dart';
+import 'package:loginflutterteste/widgets/widgetsPost/post_card_details.dart';
 
 class DetailsPage extends StatefulWidget {
   final int postId;

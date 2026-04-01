@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:loginflutterteste/features/pages/cadastro_page.dart';
+import 'package:loginflutterteste/widgets/cadastro_page.dart';
 import 'package:loginflutterteste/features/pages/feed_page.dart';
 import 'package:loginflutterteste/features/pages/login_page.dart';
 

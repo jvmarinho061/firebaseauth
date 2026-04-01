@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loginflutterteste/features/posts/post_bloc.dart';
 import 'package:loginflutterteste/features/posts/post_events.dart';
 import 'package:loginflutterteste/features/posts/post_states.dart';
-import 'package:loginflutterteste/widgets/post_card.dart';
+import 'package:loginflutterteste/widgets/widgetsPost/post_card.dart';
 
 class FeedPage extends StatefulWidget {
   const FeedPage({super.key});

@@ -7,3 +7,11 @@ class LoginRequested extends AuthEvent {
 
   LoginRequested(this.email, this.password);
 }
+
+class RegisterRequested extends AuthEvent {
+  final String email;
+  final String password;
+  RegisterRequested(this.email, this.password);
+}
+
+class CheckAuthStatus extends AuthEvent {}
